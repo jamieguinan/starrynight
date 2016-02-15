@@ -1,4 +1,4 @@
-run: cvalidate grayvalidate code5
+run: cvalidate code5
 	@echo -n "Byte count: ";	wc -c code5.c
 	@./code5 optimize
 	@ make code5
@@ -26,8 +26,8 @@ code5: code5.c v.i
 code6: code6.c
 	gcc -Wall -O2 code6.c -o code6 -lm
 
-cvalidate: validate.c
-	gcc -Wall validate.c -o cvalidate
+cvalidate: cvalidate.c
+	gcc -Wall cvalidate.c -o cvalidate
 
 grayvalidate: grayvalidate.c
 	gcc -Wall grayvalidate.c -o grayvalidate
