@@ -17,14 +17,5 @@ User @neocpp pointed out a faster filled-circle algorithm in a comment, and I fo
 
 http://stackoverflow.com/a/1237519/488095
 
-So I wrote a new version using this other algorithm, and not only does it run 170 times faster than my trig function version, it is smaller and made room to add 1 more circle. The new version is called ..., and after a few optimization passes, the score progressed down...
-
-6680
-6609
-6577
-6515
-6482
-6457
-6456
-6449
+So I wrote a new version using this other algorithm, and not only does it run 170 times faster than my trig function version, it is smaller and made room to add 1 more circle. `fastcircle1.c` includes `optimizer.c`, which regnerates `v.i`. `fastcircle2.c` is the standalone version, and the contents of `v.i` should be pasted in for the `v[]` array.
 
