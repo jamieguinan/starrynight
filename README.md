@@ -15,13 +15,21 @@ There are several versions of `code.c` that show the evolution of my solution, 2
 
 `cvalidate.c` is a C version of the validator that I wrote for speed.
 
-User @neocpp pointed out a faster filled-circle algorithm in a comment, and I found an example of it here,
+StackExchange user @neocpp pointed out a faster filled-circle algorithm in a comment, and I found an example of it here,
 
 http://stackoverflow.com/a/1237519/488095
 
-So I wrote a new version using this other algorithm, and not only does it run 170 times faster than my trig function version, it is smaller and made room to add 1 more circle. `fastcircle1.c` includes `optimizer.c`, which regnerates `v.i`. `fastcircle2.c` is the standalone version, and the contents of `v.i` should be pasted in for the `v[]` array.
+So I wrote a new version using this other algorithm, and not only does it run 170 times faster than my trig function version, it is smaller and made room to add 1 more circle. So there are now 2 additional versions.
+
+`fastcircle1.c` includes `optimizer.c`, which brute-force optimizes the files by iterating them over {-10,+10}, and regnerates `v2.i`.
+
+`fastcircle2.c` is the standalone version, and the contents of `v2.i` should be pasted into the `v[]` array.
+
+Here's the general idea of how it works,
 
     $ make cvalidate
     $ make fastcircle1 && ./fastcircle1 && ./cvalidate o.ppm
     $ ./fastcircle1 optimize
     $ make fastcircle1 && ./fastcircle1 optimize && ./cvalidate o.ppm
+
+Repeating the last line will tick down the score slightly with each pass, up to a point where people better at maths than me would say it reaches "local minima".
