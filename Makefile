@@ -26,6 +26,12 @@ code5: code5.c v.i
 code6: code6.c
 	gcc -Wall -O2 code6.c -o code6 -lm
 
+fastcircle1: fastcircle1.c optimizer.c v2.i
+	gcc -Wall -O2 fastcircle1.c -o fastcircle1
+
+fastcircle2: fastcircle2.c
+	gcc -Wall -O2 fastcircle2.c -o fastcircle2
+
 cvalidate: cvalidate.c
 	gcc -Wall cvalidate.c -o cvalidate
 

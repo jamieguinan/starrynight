@@ -13,7 +13,18 @@ There are several versions of `code.c` that show the evolution of my solution, 2
 
 `cvalidate.c` is a C version of the validator that I wrote for speed.
 
-User @neocpp pointed out a faster filled-circle algorithm in a comment, and I found
-an example of it here,
+User @neocpp pointed out a faster filled-circle algorithm in a comment, and I found an example of it here,
 
 http://stackoverflow.com/a/1237519/488095
+
+So I wrote a new version using this other algorithm, and not only does it run 170 times faster than my trig function version, it is smaller and made room to add 1 more circle. The new version is called ..., and after a few optimization passes, the score progressed down...
+
+6680
+6609
+6577
+6515
+6482
+6457
+6456
+6449
+

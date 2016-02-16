@@ -4,6 +4,10 @@ unsigned char original[500000];
 unsigned char sample[500000];
 int main(int argc, char * argv[])
 {
+  if (argc != 2) {
+    fprintf(stderr, "Usage: %s file.ppm\n", argv[0]);
+    return 1;
+  }
   char line[256];
   int i;
   long int score = 0;
