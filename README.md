@@ -21,7 +21,7 @@ http://stackoverflow.com/a/1237519/488095
 
 So I wrote a new version using this other algorithm, and not only does it run 170 times faster than my trig function version, it is smaller and made room to add 1 more circle. So there are now 2 additional versions.
 
-`fastcircle1.c` includes `optimizer.c`, which brute-force optimizes the files by iterating them over {-10,+10}, and regnerates `v2.i`.
+`fastcircle1.c` includes `optimizer.c` and regnerates `v2.i`.
 
 `fastcircle2.c` is the standalone version, and the contents of `v2.i` should be pasted into the `v[]` array.
 
