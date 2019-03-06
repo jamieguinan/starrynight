@@ -1,7 +1,9 @@
 # starrynight
 Entry for http://codegolf.stackexchange.com/questions/69930/paint-starry-night-objectively-in-1kb-of-code/
 
-I didn't win the contest, but I'm happy with the score I got, and I subjectively like the resulting image (see code6.png).
+I didn't win the contest, but I'm happy with the score I got, and I subjectively like the resulting image:
+
+<img src="code6.png">
 
 I'm putting this in a public GIT repository for fun, and as an exercise. I've used GIT a lot over the past few years, but never had reason to publish anything.
 
